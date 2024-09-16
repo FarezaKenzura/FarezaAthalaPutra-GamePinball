@@ -6,7 +6,7 @@ public class LauncherController : MonoBehaviour
 {
     public Collider bola;
     public KeyCode input;
-
+    
     public float maxTimeHold;
     public float maxForce;
 
