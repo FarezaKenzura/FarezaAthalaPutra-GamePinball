@@ -9,7 +9,6 @@ public class PaddleController : MonoBehaviour
     private float targetRelease;
     private HingeJoint hinge;
 
-    // Start is called before the first frame update
     private void Start()
     {
         hinge = GetComponent<HingeJoint>();
@@ -17,10 +16,8 @@ public class PaddleController : MonoBehaviour
         targetRelease = hinge.limits.min;
     }
 
-    // Update is called once per frame
     private void Update()
     {
-        // Read Input
         ReadInput();
     }
 
@@ -28,7 +25,6 @@ public class PaddleController : MonoBehaviour
     {
         JointSpring joinSpring = hinge.spring;
 
-        // Mengubah value spring saat input ditekan dan dilepas
         if(Input.GetKey(input))
         {
             joinSpring.targetPosition = targetPressed;
