@@ -21,6 +21,8 @@ public class SwitchController : MonoBehaviour
     public AudioManager audioManager;
     public VFXManager VFXManager;
 
+    public ScoreManager scoreManager;
+
     private void Start()
     {
         render = GetComponent<Renderer>();
@@ -54,6 +56,8 @@ public class SwitchController : MonoBehaviour
         } else {
             Set(true);
         }
+        
+        scoreManager.AddScore(1);
     }
     
     private IEnumerator BlinkTimerStart(float time)

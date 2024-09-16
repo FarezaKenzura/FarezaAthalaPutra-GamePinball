@@ -8,6 +8,7 @@ public class BumperController : MonoBehaviour
     private Animator anim;
     public AudioManager audioManager;
     public VFXManager VFXManager;
+    public ScoreManager scoreManager;
 
     private void Start()
     {
@@ -27,6 +28,8 @@ public class BumperController : MonoBehaviour
 
             audioManager.PlaySFX(col.transform.position, 0);
             VFXManager.PlayVFX(col.transform.position, 0);
+
+            scoreManager.AddScore(1);
 
             anim.SetTrigger("hit");
         }

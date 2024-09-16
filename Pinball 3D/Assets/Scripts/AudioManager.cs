@@ -10,13 +10,13 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         PlayBGM();   
-    }
-    
+    }    
+
     public void PlayBGM() 
     {
         audioBGM.Play();
     }
-    
+
     public void PlaySFX(Vector3 spawnPosition, int sfxIndex) 
     {
         if (sfxIndex >= 0 && sfxIndex < audioSFX.Length)
